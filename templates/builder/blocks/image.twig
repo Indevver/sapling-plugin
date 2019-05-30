@@ -1,0 +1,5 @@
+{% set item  = item | merge({'Class(es)': item['Image Alignment']}) %}
+{% extends 'builder/blocks/base.twig' %}
+{% block block_content %}
+    <img src="{{ Image(item.Image).src }}" alt="{{ Image(item.Image).alt }}" title="{{ Image(item.Image).title }}" class="img-fluid"/>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'layouts/base.twig' %}
+{% block content %}
+    {% for row in post.get_field('Section') %}
+        <section
+            class=" section {{ row['Class(es)'] }}
+                {%- if row['Text Alignment'] %} {{ row['Text Alignment'] }} {% endif -%}
+                {%- if row['Text Color'] %} {{ row['Text Color'] }} {% endif -%}
+                {%- if row['Background Type'] == "solid" %} {{ row['Background Color'] }} {% endif -%}
+            "
+            id="{{ row.ID }}"
+            style="
+                {%- if row['Background Type'] == "image" -%}
+                    background-image: url({{ Image(row['Background Image']).src }});
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                {%- elseif row['Background Type'] == "overlay" -%}
+                        background:
+                        linear-gradient(
+                          rgba({{ row['Overlay Color'] }}, 0.45),
+                          rgba({{ row['Overlay Color'] }}, 0.45)
+                        ),
+                        url({{ Image(row['Background Image']).src }});
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                {%- elseif row['Background Type'] == "gradient" -%}
+                        background-image: linear-gradient(to bottom, {{ row['Top Background Color'] }}, {{ row['Bottom Background Color'] }});
+                {%- endif -%}
+                {%- if row['Max Width'] -%}max-width: {{ row['Max Width'] }};{%- endif -%}
+            "
+        >
+            <div class="{%- if not row['Full Width'] %} container {% endif -%}
+                    {%- if row['Margin Top'] %} {{ row['Margin Top'] }} {% endif -%}
+                    {%- if row['Margin Right'] %} {{ row['Margin Right'] }} {% endif -%}
+                    {%- if row['Margin Bottom'] %} {{ row['Margin Bottom'] }} {% endif -%}
+                    {%- if row['Margin Left'] %} {{ row['Margin Left'] }} {% endif -%}
+                    {%- if row['Padding Top'] %} {{ row['Padding Top'] }} {% endif -%}
+                    {%- if row['Padding Right'] %} {{ row['Padding Right'] }} {% endif -%}
+                    {%- if row['Padding Bottom'] %} {{ row['Padding Bottom'] }} {% endif -%}
+                    {%- if row['Padding Left'] %} {{ row['Padding Left'] }} {% endif -%}
+                    "
+            >
+                {% if row['Heading'] %}<{{ row['Heading Size'] ?? 'h2' }}>{{ row['Heading'] }}</{{ row['Heading Size'] ?? 'h2' }}>{% endif %}
+                <div class="row">
+                    {% include 'builder/Columns/columns-'~row.Columns~'.twig' %}
+                </div>
+            </div>
+        </section>
+    {% else %}
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>{{ title }}</h1>
+                    {{ post.content }}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

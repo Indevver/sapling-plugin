@@ -1,0 +1,16 @@
+{% extends 'builder/blocks/base.twig' %}
+{% block block_content %}
+    {% for button in item.Buttons %}
+        {% if loop.first and loop.length > 1 %}
+            <div class="btn-group" role="group" aria-label="Basic example">
+        {% endif %}
+
+        <a href="{{ button.Button.url }}" target="{{ button.Button.target }}" class="btn {{ button['Button Style'] }} {{ button['Button Size'] }}">
+            {{ button.Button.title }}
+        </a>
+
+        {% if loop.last and loop.length > 1 %}
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

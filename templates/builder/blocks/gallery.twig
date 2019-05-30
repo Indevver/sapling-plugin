@@ -1,0 +1,12 @@
+{% extends 'builder/blocks/base.twig' %}
+{% block block_content %}
+    <div class="row">
+    {% for image in item.Images %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <a href="{{ Image(image.Image).src }}" class="fancybox" data-caption="{{ Image(image.Image).alt }}" data-fancybox="gallery">
+                <img src="{{ Image(image.Image).src|resize(600,600,true) }}" alt="{{ Image(image.Image).alt }}" title="{{ Image(image.Image).title }}" class="img-fluid img-thumbnail"/>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

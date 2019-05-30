@@ -1,0 +1,23 @@
+{
+    "name": "indevver/sapling",
+    "description": "WordPress Base Theme using timber, webpack and acf",
+    "license": "MIT",
+    "optimize-autoloader": true,
+    "classmap-authoritative": true,
+    "authors": [
+        {
+            "name": "Robert Parker",
+            "email": "diaboloshogunate@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Sapling\\Plugin\\": "src/"}
+    },
+    "require": {
+        "php": ">=7.1",
+        "timber/timber": "^1.9",
+        "stoutlogic/acf-builder": "^1.8",
+        "symfony/yaml": "^4.2",
+        "symfony/config": "^4.2"
+    }
+}

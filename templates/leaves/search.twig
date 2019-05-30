@@ -1,0 +1,13 @@
+<form class="{% if form_style == "menu" %}form-inline my-2 my-lg-0{% endif %}" action="{{site.url}}">
+    {% if form_style == "menu" %}
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value="" name="s" id="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    {% else %}
+        <div class="input-group mb-3">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value="" name="s" id="s">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Button</button>
+            </div>
+        </div>
+    {% endif %}
+</form>

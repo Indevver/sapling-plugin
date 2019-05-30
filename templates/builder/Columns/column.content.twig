@@ -1,0 +1,3 @@
+{% for item  in column %}
+    {% include ['builder/blocks/'~item.acf_fc_layout~'.twig', 'builder/blocks/no-block.twig'] %}
+{% endfor %}

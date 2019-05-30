@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                {% for item in primary_menu.items %}
+                    <li class="nav-main {{ item.classes|join(' ') }}">
+                        <a class="nav-link {% if item.current %}active{% endif %}" href="{{ item.link }}">{{ item.title }}</a>
+                    </li>
+                    {% if item.children %}
+                        <li class="nav-main dropdown {{ item.classes|join(' ') }}">
+                            <a class="nav-link dropdown-toggle {% if item.current %}active{% endif %}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ item.title }}</a>
+                            <div class="dropdown-menu">
+                                {% for child in item.children %}
+                                    <a href="{{ child.link }}" class="dropdown-item {% if item.current %}active{% endif %}">{{ child.title }}</a>
+                                {% endfor %}
+                            </div>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            {% include 'leaves/search.twig' with {form_style: "menu"} %}
+        </div>
+    </div>
+</nav>

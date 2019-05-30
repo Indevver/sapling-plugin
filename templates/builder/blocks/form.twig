@@ -1,0 +1,6 @@
+{% extends 'builder/blocks/base.twig' %}
+{% block block_content %}
+    {% filter shortcodes %}
+        [gravityform id={{ item['Form ID'] }} title=false description=false ajax=false tabindex=49]
+    {% endfilter %}
+{% endblock %}

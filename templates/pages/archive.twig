@@ -1,0 +1,26 @@
+{% extends 'layouts/base.twig' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>{{ title }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% for post in posts %}
+                <div class="col">
+                    {% include ['leaves/teaser-'~post.type.slug~'.twig', 'leaves/teaser.twig'] %}
+                </div>
+            {% else %}
+                {% include 'leaves/nothing.twig' %}
+            {% endfor %}
+        </div>
+        {% if posts %}
+            <div class="row">
+                <div class="col">
+                    {% include 'leaves/pagination.twig' with {posts: posts} only %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

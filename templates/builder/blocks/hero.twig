@@ -1,0 +1,20 @@
+{% set inline_styles = "background-image: url("~Image(item.Background).src~")" %}
+{% extends 'builder/blocks/base.twig' %}
+{% block block_content %}
+    <div class="content">
+        <h1>{{ item.Heading }}</h1>
+        {% for button in item['Call To Action'] %}
+            {% if loop.first and loop.length > 1 %}
+                <div class="btn-group" role="group" aria-label="Basic example">
+            {% endif %}
+
+            <a href="{{ button.Button.url }}" target="{{ button.Button.target }}" class="btn {{ button['Button Style'] }} {{ button['Button Size'] }}">
+                {{ button.Button.title }}
+            </a>
+
+            {% if loop.last and loop.length > 1 %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

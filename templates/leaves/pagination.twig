@@ -1,0 +1,21 @@
+<nav aria-label="Pagination">
+    <ul class="pagination justify-content-center">
+        <li class="page-item {% if not posts.pagination.prev %}disabled{% endif %}">
+            <a class="page-link" {% if posts.pagination.prev %}href="{{posts.pagination.prev.link}}"{% else %}tabindex="-1"{% endif %}>Previous</a>
+        </li>
+
+        {% for page in posts.pagination.pages %}
+            {% if page.link %}
+                <li class="page-item"><a class="page-link" href="{{ page.link }}">{{page.title}}</a></li>
+            {% else %}
+                <li class="page-item active">
+                    <a class="page-link" href="#">{{page.title}} <span class="sr-only">(current)</span></a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        <li class="page-item {% if not posts.pagination.next %}disabled{% endif %}">
+            <a class="page-link" {% if posts.pagination.next %}href="{{posts.pagination.prev.link}}"{% else %}tabindex="-1"{% endif %}>Previous</a>
+        </li>
+    </ul>
+</nav>
