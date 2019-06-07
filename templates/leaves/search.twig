@@ -1,12 +1,26 @@
 <form class="{% if form_style == "menu" %}form-inline my-2 my-lg-0{% endif %}" action="{{site.url}}">
     {% if form_style == "menu" %}
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value="" name="s" id="s">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <div class="field has-addons">
+            <div class="control">
+                <input class="input" type="search" placeholder="Search" aria-label="Search" value="" name="s">
+            </div>
+            <div class="control">
+                <button type="submit" class="button is-info">
+                    Search
+                </button>
+            </div>
+        </div>
     {% else %}
         <div class="input-group mb-3">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value="" name="s" id="s">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Button</button>
+            <div class="field">
+                <div class="control">
+                    <input class="input" type="search" placeholder="Search" aria-label="Search" value="" name="s">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary" type="button">Button</button>
+                </div>
             </div>
         </div>
     {% endif %}
