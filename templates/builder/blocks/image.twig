@@ -1,5 +1,8 @@
 {% set item  = item | merge({'Class(es)': item['Image Alignment']}) %}
 {% extends 'builder/blocks/base.twig' %}
 {% block block_content %}
-    <img data-src="{{ Image(item.Image).src }}" alt="{{ Image(item.Image).alt }}" title="{{ Image(item.Image).title }}" class="img-fluid lozad"/>
+    {{ item['Image Alignment'] }}
+    <figure class="image has-text-centered">
+        <img data-src="{{ Image(item.Image).src }}" alt="{{ Image(item.Image).alt }}" title="{{ Image(item.Image).title }}" class="{% if not item['Full Width'] %}shrink{% endif %} lozad"/>
+    </figure>
 {% endblock %}
