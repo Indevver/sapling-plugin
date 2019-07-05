@@ -1,16 +1,10 @@
 {% extends 'builder/blocks/base.twig' %}
 {% block block_content %}
-    {% for button in item.Buttons %}
-        {% if loop.first and loop.length > 1 %}
-            <div class="btn-group" role="group" aria-label="Basic example">
-        {% endif %}
-
-        <a href="{{ button.Button.url }}" target="{{ button.Button.target }}" class="btn {{ button['Button Style'] }} {{ button['Button Size'] }}">
-            {{ button.Button.title }}
-        </a>
-
-        {% if loop.last and loop.length > 1 %}
-            </div>
-        {% endif %}
-    {% endfor %}
+    <div class="buttons {{ item['Button Alignment'] }} {% if item['Remove Spacing'] %}has-addons{% endif %} {{ item['Button Size'] }}">
+        {% for button in item.Buttons %}
+            <a href="{{ button.Button.url }}" target="{{ button.Button.target }}" class="button {% if item['Rounded'] %}is-rounded{% endif %} {% if item['Inverted'] %}is-inverted{% endif %} {% if item['Outline'] %}is-outlined{% endif %} {{ button['Button Style'] }}">
+                {{ button.Button.title }}
+            </a>
+        {% endfor %}
+    </div>
 {% endblock %}
