@@ -1,20 +1,18 @@
 {% set inline_styles = "background-image: url("~Image(item.Background).src~")" %}
+{% set item = item|merge({'Class(es)': item['Class(es)'] ~ " hero is-primary is-large"}) %}
 {% extends 'builder/blocks/base.twig' %}
 {% block block_content %}
-    <div class="content">
-        <h1>{{ item.Heading }}</h1>
-        {% for button in item['Call To Action'] %}
-            {% if loop.first and loop.length > 1 %}
-                <div class="btn-group" role="group" aria-label="Basic example">
-            {% endif %}
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">{{ item.Heading }}</h1>
 
-            <a href="{{ button.Button.url }}" target="{{ button.Button.target }}" class="btn {{ button['Button Style'] }} {{ button['Button Size'] }}">
-                {{ button.Button.title }}
-            </a>
-
-            {% if loop.last and loop.length > 1 %}
+                <div class="buttons is-centered are-medium">
+                    {% for button in item['Call To Action'] %}
+                        <a href="{{ button.Button.url }}" target="{{ button.Button.target }}" class="button {{ button['Button Style'] }}">
+                            {{ button.Button.title }}
+                        </a>
+                    {% endfor %}
                 </div>
-            {% endif %}
-        {% endfor %}
-    </div>
+            </div>
+        </div>
 {% endblock %}
