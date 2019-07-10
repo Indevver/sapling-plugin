@@ -11,6 +11,7 @@ class Video extends FieldsBuilder
         parent::__construct('video', ['label' => 'Video']);
         $this->addTab('Content')
             ->addOembed('video')
+            ->addImage('Preview')
         ;
     }
 }

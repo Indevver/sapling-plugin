@@ -2,7 +2,7 @@
 {% block block_content %}
     <div class="buttons {{ item['Button Alignment'] }} {% if item['Remove Spacing'] %}has-addons{% endif %} {{ item['Button Size'] }}">
         {% for button in item.Buttons %}
-            <a href="{{ button.Button.url }}" target="{{ button.Button.target }}" class="button {% if item['Rounded'] %}is-rounded{% endif %} {% if item['Inverted'] %}is-inverted{% endif %} {% if item['Outline'] %}is-outlined{% endif %} {{ button['Button Style'] }}">
+            <a href="{{ button.Button.url }}" target="{{ button.Button.target }}" class="button {% if item['Rounded'] %}is-rounded{% endif %} {% if button.Inverted %}is-inverted{% endif %} {% if button.Outline %}is-outlined{% endif %} {{ button['Button Color'] }}">
                 {{ button.Button.title }}
             </a>
         {% endfor %}

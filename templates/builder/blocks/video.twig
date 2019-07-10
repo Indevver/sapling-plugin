@@ -1,6 +1,13 @@
 {% extends 'builder/blocks/base.twig' %}
 {% block block_content %}
-    <div class="embed-responsive">
-        {{ item.video }}
-    </div>
+    {% if item.Preview %}
+        {% set start = function('strpos', item.video, 'src') %}
+        <a data-fancybox href="{{ item.video|slice(start+5, -123) }}">
+            <img src="{{ item.Preview.url }}" alt="{{ item.Preview.title }}">
+        </a>
+    {% else %}
+        <div class="embed-responsive">
+            {{ item.video }}
+        </div>
+    {% endif %}
 {% endblock %}

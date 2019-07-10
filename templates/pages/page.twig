@@ -40,17 +40,19 @@
                     "
             >
                 {% if row['Heading'] %}<{{ row['Heading Size'] ?? 'h2' }}>{{ row['Heading'] }}</{{ row['Heading Size'] ?? 'h2' }}>{% endif %}
-                <div class="row">
+                <div class="columns">
                     {% include 'builder/Columns/columns-'~row.Columns~'.twig' %}
                 </div>
             </div>
         </section>
     {% else %}
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1>{{ title }}</h1>
-                    {{ post.content }}
+            <div class="columns">
+                <div class="column">
+                    <div class="content">
+                        <h1>{{ title }}</h1>
+                        {{ post.content }}
+                    </div>
                 </div>
             </div>
         </div>

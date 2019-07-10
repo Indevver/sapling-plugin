@@ -19,14 +19,10 @@ require_once __DIR__.'/includes/yoast.php';
 require_once __DIR__.'/shortcodes/date.php';
 require_once __DIR__.'/shortcodes/social.php';
 
-if(is_array(Timber::$locations))
-{
-    Timber::$locations = Timber::$locations + [__DIR__.'/templates'];
-}
-else
-{
-    Timber::$locations = [
-        Timber::$locations,
-        __DIR__.'/templates'
-    ];
-}
+
+add_filter('timber/loader/paths', function($paths){
+    array_unshift($paths, get_stylesheet_directory().'/templates');
+    array_push($paths, __DIR__.'/templates');
+
+    return $paths;
+});
