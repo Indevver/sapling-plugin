@@ -1,4 +1,4 @@
-{% set item  = item | merge({'Class(es)': item['Image Alignment']}) %}
+{% set item  = item | merge({'Class(es)': item['Class(es)'] ~ " " ~ item['Image Alignment']}) %}
 {% extends 'builder/blocks/base.twig' %}
 {% block block_content %}
     <figure class="image has-{{ item['Image Alignment'] }}">

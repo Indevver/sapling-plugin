@@ -16,9 +16,8 @@ class Button extends FieldsBuilder
                     "is-centered" => "<span class=\"dashicons dashicons-editor-aligncenter\"></span>",
                     "is-right" => "<span class=\"dashicons dashicons-editor-alignright\"></span>",
                 ]
-            ])->setDefaultValue('is-left')->setWidth('25')
-            ->addTrueFalse('Remove Spacing')->setWidth('25')
-            ->addTrueFalse('Rounded')->setWidth('25')
+            ])->setDefaultValue('is-left')->setWidth('33')
+            ->addTrueFalse('Remove Spacing')->setWidth('33')
             ->addSelect('Button Size', [
                 'choices' => [
 	                '' => 'Default',
@@ -28,12 +27,10 @@ class Button extends FieldsBuilder
                 ],
             ])->setDefaultValue('')->setWidth('25')
             ->addRepeater('Buttons')
-                ->addLink('Button')->setWidth('40')
+                ->addLink('Button')->setWidth('50')
                 ->addSelect('Button Color', [
                     'choices' => $button_styles,
-                ])->setDefaultValue($default)->setWidth('20')
-                ->addTrueFalse('Inverted')->setWidth('20')
-                ->addTrueFalse('Outline')->setWidth('20')
+                ])->setDefaultValue($default)->setWidth('50')
             ->endRepeater()
         ;
     }
