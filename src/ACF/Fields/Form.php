@@ -11,7 +11,7 @@ class Form extends FieldsBuilder
         $choices = [];
         $forms = \RGFormsModel::get_forms(null,'title');
         foreach ( $forms as $form ) {
-            $choices[ $form->id ] = $form->title;
+            $choices[ (string) $form->id ] = $form->title;
         }
 
         parent::__construct('form', ['label' => 'Form']);
