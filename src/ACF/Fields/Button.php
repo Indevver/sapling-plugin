@@ -21,11 +21,12 @@ class Button extends FieldsBuilder
             ->addTrueFalse('Rounded')->setWidth('25')
             ->addSelect('Button Size', [
                 'choices' => [
+	                '' => 'Default',
                     'are-small' => 'Small',
-                    'are-medium' => 'Normal',
+                    'are-medium' => 'Medium',
                     'are-large' => 'Large',
                 ],
-            ])->setDefaultValue('are-medium')->setWidth('25')
+            ])->setDefaultValue('')->setWidth('25')
             ->addRepeater('Buttons')
                 ->addLink('Button')->setWidth('40')
                 ->addSelect('Button Color', [
