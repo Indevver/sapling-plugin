@@ -39,8 +39,10 @@
                     {%- if row['Padding Left'] %} {{ row['Padding Left'] }} {% endif -%}
                     "
             >
-                {% if row['Heading'] %}<{{ row['Heading Size'] ?? 'h2' }}>{{ row['Heading'] }}</{{ row['Heading Size'] ?? 'h2' }}>{% endif %}
-                <div class="columns">
+                <div class="content">
+                    {% if row['Heading'] %}<{{ row['Heading Size'] ?? 'h2' }}>{{ row['Heading'] }}</{{ row['Heading Size'] ?? 'h2' }}>{% endif %}
+                </div>
+                <div class="columns {% if row['Align Center'] %}is-centered{% endif %}">
                     {% include 'builder/Columns/columns-'~row.Columns~'.twig' %}
                 </div>
             </div>
