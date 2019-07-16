@@ -20,11 +20,12 @@ class Button extends FieldsBuilder
             ->addTrueFalse('Remove Spacing')->setWidth('33')
             ->addSelect('Button Size', [
                 'choices' => [
+	                '' => 'Default',
                     'are-small' => 'Small',
-                    'are-medium' => 'Normal',
+                    'are-medium' => 'Medium',
                     'are-large' => 'Large',
                 ],
-            ])->setDefaultValue('are-medium')->setWidth('33')
+            ])->setDefaultValue('')->setWidth('25')
             ->addRepeater('Buttons')
                 ->addLink('Button')->setWidth('50')
                 ->addSelect('Button Color', [
