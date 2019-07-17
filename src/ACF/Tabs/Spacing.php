@@ -15,7 +15,7 @@ class Spacing
     {
         $builder
             ->addTab('Spacing')
-            ->addTrueFalse('Align Center')->setWidth(50)
+            ->addTrueFalse('Vertical Align Center')->setWidth(50)
             ->addTrueFalse('Full Width')->setWidth(25)
             ->addText('Max Width')->setWidth(25)
             ->addSelect('Margin Top', ['choices' => [
