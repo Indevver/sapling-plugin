@@ -28,7 +28,7 @@
                 {%- if row['Max Width'] -%}max-width: {{ row['Max Width'] }};{%- endif -%}
             "
         >
-            <div class="{%- if not row['Full Width'] %} container {% endif -%}
+            <div class="{%- if not row['Full Width'] %} container {% else %} pl-none pr-none {% endif -%}
                     {%- if row['Margin Top'] %} {{ row['Margin Top'] }} {% endif -%}
                     {%- if row['Margin Right'] %} {{ row['Margin Right'] }} {% endif -%}
                     {%- if row['Margin Bottom'] %} {{ row['Margin Bottom'] }} {% endif -%}
