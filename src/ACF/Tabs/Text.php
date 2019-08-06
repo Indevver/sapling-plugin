@@ -24,9 +24,9 @@ class Text
             ->addTab('Font')
             ->addField('Text Alignment', 'button_group', [
                 'choices' => [
-                    "text-left" => "<span class=\"dashicons dashicons-editor-alignleft\"></span>",
-                    "text-center" => "<span class=\"dashicons dashicons-editor-aligncenter\"></span>",
-                    "text-right" => "<span class=\"dashicons dashicons-editor-alignright\"></span>",
+                    "has-text-left" => "<span class=\"dashicons dashicons-editor-alignleft\"></span>",
+                    "has-text-centered" => "<span class=\"dashicons dashicons-editor-aligncenter\"></span>",
+                    "has-text-right" => "<span class=\"dashicons dashicons-editor-alignright\"></span>",
                 ]
             ])->setWidth('50')
             ->addSelect('Text Color', [

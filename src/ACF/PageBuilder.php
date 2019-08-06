@@ -22,15 +22,20 @@ class PageBuilder extends FieldsBuilder
             ])
             ->addRepeater('Section', ['layout' => 'block'])
             ->addTab('Content')
+	        ->addText('Heading')->setWidth('50')
             ->addSelect('Heading Size', ['choices' => [
                 'h1' => 'Heading 1',
                 'h2' => 'Heading 2',
                 'h3' => 'Heading 3',
                 'h4' => 'Heading 4',
-                'h5' => 'Heading 5',
-                'h6' => 'Heading 6',
-            ]])->setWidth('50')
-            ->addText('Heading')->setWidth('50')
+            ]])->setWidth('30')
+	        ->addField('Heading Alignment', 'button_group', [
+		        'choices' => [
+			        "has-text-left" => "<span class=\"dashicons dashicons-editor-alignleft\"></span>",
+			        "has-text-centered" => "<span class=\"dashicons dashicons-editor-aligncenter\"></span>",
+			        "has-text-right" => "<span class=\"dashicons dashicons-editor-alignright\"></span>",
+		        ]
+	        ])->setWidth('20')
             ->addField('Columns', 'range', [
                 'wrapper' => ['class' => 'column-types'],
                 "default_value" => 10,
