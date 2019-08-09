@@ -1,4 +1,4 @@
-<section class="block-{{ item.acf_fc_layout }} {%- if item['Background Type'] == "solid" %} {{ item['Background Color'] }} {% endif -%} {{ item['Class(es)'] }}" id="{{ item.ID }}"
+<section class="block-{{ item.acf_fc_layout }} {%- if item['Background Type'] == "solid" %} {{ item['Background Color'] }} {% endif %} {{ item['Class(es)'] }}" id="{{ item.ID }}"
          style="{{ inline_styles ?? '' }}
                 {%- if item['Background Type'] == "image" -%}
                         background-image: url({{ Image(item['Background Image']).src }});

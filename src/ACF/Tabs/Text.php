@@ -24,6 +24,7 @@ class Text
             ->addTab('Font')
             ->addField('Text Alignment', 'button_group', [
                 'choices' => [
+                    ""          => "Default",
                     "text-left" => "<span class=\"dashicons dashicons-editor-alignleft\"></span>",
                     "text-center" => "<span class=\"dashicons dashicons-editor-aligncenter\"></span>",
                     "text-right" => "<span class=\"dashicons dashicons-editor-alignright\"></span>",
