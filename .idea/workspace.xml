@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d95e3699-fba4-4abf-aa27-980147b6a436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ACF/PageBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ACF/PageBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ACF/Tabs/Background.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ACF/Tabs/Background.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ACF/Tabs/Text.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ACF/Tabs/Text.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layouts/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/page.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/page.twig" afterDir="false" />
     </list>
@@ -94,7 +93,7 @@
       <workItem from="1565034058507" duration="3297000" />
       <workItem from="1565287589981" duration="480000" />
       <workItem from="1565293217030" duration="57000" />
-      <workItem from="1565368698965" duration="4832000" />
+      <workItem from="1565368698965" duration="5537000" />
     </task>
     <servers />
   </component>
