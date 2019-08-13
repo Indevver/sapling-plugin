@@ -30,11 +30,13 @@ class Background
                     'solid' => 'Solid',
                     'image' => 'Image',
                     'overlay' => 'Image with overlay',
+	                'header-right' => 'Header Image Right',
+	                'header-left' => 'Header Image Left',
                 ]
             ])
             ->addSelect('Background Color', ['choices' => $this->background_colors])->conditional('Background Type', '==', 'solid')
             ->addSelect('Overlay Color', ['choices' => $this->overlay_colors])->conditional('Background Type', '==', 'overlay')
-            ->addImage('Background Image')->conditional('Background Type', '!=', 'solid')
+            ->addImage('Background Image')->conditional('Background Type', '!=', 'solid')->or('Background Type', '!=', '')
         ;
     }
 }

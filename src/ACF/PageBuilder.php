@@ -22,6 +22,7 @@ class PageBuilder extends FieldsBuilder
             ])
             ->addRepeater('Section', ['layout' => 'block'])
             ->addTab('Content')
+	        ->addText('Label')
 	        ->addText('Heading')->setWidth('50')
             ->addSelect('Heading Size', ['choices' => [
                 'h1' => 'Heading 1',
