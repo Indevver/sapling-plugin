@@ -1,5 +1,22 @@
 <?php
 
+function admin_bar_color()
+{
+    switch($_ENV['APP_ENV'] ?? 'dev')
+    {
+        case 'dev':
+            return 'ectoplasm';
+        case 'stage':
+            return 'sunrise';
+        case 'prod':
+            return 'fresh';
+        case 'test':
+            return 'midnight';
+        default:
+            return 'light';
+    }
+}
+
 add_action('admin_bar_menu', function() {
     // add new message for staging/live/dev
     global $wp_admin_bar;
@@ -40,24 +57,19 @@ add_action('admin_bar_menu', function() {
 
 add_action('admin_init', function() {
     // Override the user's admin color scheme.
-    add_filter('get_user_option_admin_color', function() {
-        switch($_ENV['APP_ENV'] ?? 'dev')
-        {
-            case 'dev':
-                return 'ectoplasm';
-            case 'stage':
-                return 'sunrise';
-            case 'prod':
-                return 'fresh';
-            case 'test':
-                return 'midnight';
-            default:
-                return 'light';
-        }
-    });
-
+    add_filter('get_user_option_admin_color', 'admin_bar_color');
     // Hide the Admin Color Scheme field
     add_action('admin_color_scheme_picker', function(){
         remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker');
     }, 8);
+});
+
+add_action('wp_enqueue_scripts', function () {
+    if(admin_bar_color() != 'fresh') {
+        wp_enqueue_style(
+            'color-admin-bar',
+            admin_url('/css/colors/' . admin_bar_color() . '/colors.min.css'),
+            ['admin-bar']
+        );
+    }
 });
