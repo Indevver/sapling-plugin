@@ -4,23 +4,6 @@
 <!--[if gt IE 9]><!--><html class="no-js no-svg" {{ site.language_attributes }}> <!--<![endif]-->
 <head>
     {% block head %}
-        {% block gtm_head %}
-            {% if gtm is defined and gtm %}
-                <!-- Google Tag Manager -->
-                <script>
-                    (function(w,d,s,l,i){
-                        w[l]=w[l]||[];w[l].push({
-                            'gtm.start': new Date().getTime(),
-                            event:'gtm.js'
-                        });
-                        var f=d.getElementsByTagName(s)[0],
-                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-                        j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                    })(window,document,'script','dataLayer','{{ gtm }}');
-                </script>
-                <!-- End Google Tag Manager -->
-            {% endif %}
-        {% endblock %}
         {% block meta %}
             <meta charset="{{ site.charset }}" />
             <meta name="description" content="{{ site.description }}">
@@ -31,9 +14,6 @@
             <link rel="author" href="{{ site.theme.link }}/humans.txt" />
             <link rel="pingback" href="{{ site.pingback_url }}" />
             <link rel="profile" href="http://gmpg.org/xfn/11">
-            {% if jquery is defined %}
-                <script src="{{ jquery }}"></script>
-            {% endif %}
         {% endblock %}
 
         {{function('wp_head')}}
@@ -41,14 +21,7 @@
 </head>
 
 <body class="{{body_class}} has-navbar-fixed-top">
-    {% block gtm_body %}
-        {% if gtm is defined and gtm %}
-            <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ gtm }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) -->
-        {% endif %}
-    {% endblock %}
-    {{ function('wp_body_open') }}
+
 
     {% block primary_menu %}
         {% include 'layouts/menu.twig' %}
