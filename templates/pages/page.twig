@@ -56,7 +56,10 @@
             >
                 <div class="content">
                     {% if row['Label'] %}<div class="is-label">{{ row['Label'] }}</div>{% endif %}
-                    {% if row['Heading'] %}<{{ row['Heading Size'] ?? 'h2' }}>{{ row['Heading'] }}</{{ row['Heading Size'] ?? 'h2' }}>{% endif %}
+                    {% if row['Heading'] %}
+                        <{{ row['Heading Size'] ?? 'h2' }} class="{%- if row['Heading Alignment'] %} {{ row['Heading Alignment'] }} {% endif -%}">
+                        {{ row['Heading'] }}
+                    </{{ row['Heading Size'] ?? 'h2' }}>{% endif %}
                 </div>
                 <div class="columns {% if row['Vertical Align Center'] %}is-vertically-centered{% endif %}">
                     {% include 'builder/Columns/columns-'~row.Columns~'.twig' %}
