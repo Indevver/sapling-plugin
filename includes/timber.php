@@ -1,5 +1,7 @@
 <?php
 add_filter('timber/context', function($context){
+    $context['env'] = $_ENV;
+    $context['debug'] = WP_DEBUG;
     $context['gtm'] = get_theme_mod('gtm');
     $context['menu_logo'] = get_theme_mod('menu_logo');
     $context['facebook'] = get_theme_mod('social_facebook');

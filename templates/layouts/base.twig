@@ -42,7 +42,7 @@
 
 <body class="{{body_class}} has-navbar-fixed-top">
     {% block gtm_body %}
-        {% if gtm is defined and gtm %}
+        {% if (gtm is defined and gtm) and (env.APP_ENV is defined and env.APP_ENV == 'prod') %}
             <!-- Google Tag Manager (noscript) -->
             <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ gtm }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- End Google Tag Manager (noscript) -->
