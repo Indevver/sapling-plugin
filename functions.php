@@ -29,3 +29,26 @@ add_filter('timber/loader/paths', function($paths){
 
     return $paths;
 });
+
+add_action('acf/init', function()
+{
+    if(function_exists('acf_register_block')){
+        $blocks = apply_filters('gutenblock_blocks', []);
+        /** @var \gutenblock\IGutenBlock $block */
+        foreach($blocks as $block)
+        {
+            acf_register_block(array(
+                'name'				=> $block->getName(),
+                'title'				=> $block->getTitle(),
+                'description'		=> $block->getDescription(),
+                'render_callback'	=> $block->getRenderCallback(),
+                'category'			=> $block->getCategory(),
+                'icon'				=> $block->getIcon(),
+                'keywords'			=> $block->getKeywords(),
+            ));
+            $builder = $block->getFields();
+            $builder->setLocation('block', '==', 'acf/'.$block->getName());
+            acf_add_local_field_group($builder->build());
+        }
+    }
+});
