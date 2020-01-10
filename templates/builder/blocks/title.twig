@@ -1,4 +1,0 @@
-{% extends 'builder/blocks/base.twig' %}
-{% block block_content %}
-    <{{ item.Size }} class="{% if item['Is Subtitle'] %}subtitle{% else %}title{% endif %} is-{{ item.Size | trim('h') }}">{{ item.Heading }}</{{ item.Size }}>
-{% endblock %}

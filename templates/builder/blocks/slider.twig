@@ -1,8 +1,0 @@
-{% extends 'builder/blocks/base.twig' %}
-    {% block block_content %}
-    <div class="slick">
-        {% for image in item.Slides %}
-            <img src="{{ Image(image.Slide).src }}" alt="{{ Image(image.Slide).alt }}" title="{{ Image(image.Slide).title }}"/>
-        {% endfor %}
-    </div>
-{% endblock %}

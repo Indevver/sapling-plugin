@@ -15,7 +15,7 @@
             <meta itemprop="url" content="{{ post.link }}" />
         </article>
 
-        {% include ["leaves/teaser-product.twig"] with { products: related_products } %}
+        {% include ["partials/teaser-product.twig"] with { products: related_products } %}
         {% do action('woocommerce_after_single_product') %}
     </div>
 {% endblock  %}
