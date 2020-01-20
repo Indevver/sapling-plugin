@@ -14,7 +14,6 @@ add_filter('timber/context', function($context){
     $context['myspace'] = get_theme_mod('social_myspace');
     $context['yelp'] = get_theme_mod('social_yelp');
     $context['youtube'] = get_theme_mod('social_youtube');
-    $context['jquery'] = 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js';
 
     return $context;
 });
