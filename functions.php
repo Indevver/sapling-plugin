@@ -39,6 +39,7 @@ add_action('acf/init', function()
         {
             acf_register_block(array(
                 'name'				=> $block->getName(),
+                'className'         => sanitize_title($block->getName()),
                 'title'				=> $block->getTitle(),
                 'description'		=> $block->getDescription(),
                 'render_callback'	=> $block->getRenderCallback(),
