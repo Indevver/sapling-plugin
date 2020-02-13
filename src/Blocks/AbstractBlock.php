@@ -47,10 +47,10 @@ abstract class AbstractBlock implements IGutenBlock
         $context['content'] = $content;
         $context['is_preview'] = $is_preview;
         $context['fields'] = get_fields();
+        $context['slug'] = str_replace('acf/', '', $block['name']);
+        $context['classes'] = 'block-'.$context['slug']. ' '.$block['className'];
         $context = $this->filterContext($context);
 
-        $slug = str_replace('acf/', '', $block['name']);
-
-        Timber::render('blocks/'.$slug.'.twig', $context);
+        Timber::render('blocks/'.$context['slug'].'.twig', $context);
     }
 }

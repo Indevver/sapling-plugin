@@ -34,11 +34,11 @@ add_action('acf/init', function()
 {
     if(function_exists('acf_register_block')){
         $blocks = apply_filters('gutenblock_blocks', []);
-        /** @var \gutenblock\IGutenBlock $block */
+        /** @var \Sapling\Plugin\Blocks\AbstractBlock $block */
         foreach($blocks as $block)
         {
             acf_register_block(array(
-                'name'				=> $block->getName(),
+                'name'				=> sanitize_title($block->getName()),
                 'className'         => sanitize_title($block->getName()),
                 'title'				=> $block->getTitle(),
                 'description'		=> $block->getDescription(),
