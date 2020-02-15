@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d95e3699-fba4-4abf-aa27-980147b6a436" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sapling-plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sapling-plugin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/base.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/builder/blocks/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/builder/blocks/base.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/page.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/page.twig" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +53,12 @@
     </option>
   </component>
   <component name="ProjectId" id="1P1G9jQMUwPH3SK34VRzoKpNfsR" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -65,15 +73,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -93,6 +101,32 @@
       <workItem from="1565287589981" duration="480000" />
       <workItem from="1565293217030" duration="57000" />
       <workItem from="1565368698965" duration="5537000" />
+      <workItem from="1567528282014" duration="294000" />
+      <workItem from="1568126837764" duration="607000" />
+      <workItem from="1569359208700" duration="193000" />
+      <workItem from="1569514167964" duration="274000" />
+      <workItem from="1570130330524" duration="450000" />
+      <workItem from="1570564003365" duration="790000" />
+      <workItem from="1571252768174" duration="163000" />
+      <workItem from="1571269610038" duration="286000" />
+      <workItem from="1571325086595" duration="361000" />
+      <workItem from="1571585413740" duration="194000" />
+      <workItem from="1572532990583" duration="234000" />
+      <workItem from="1572920600476" duration="507000" />
+      <workItem from="1572930642522" duration="188000" />
+      <workItem from="1573192151539" duration="711000" />
+      <workItem from="1573312011375" duration="1159000" />
+      <workItem from="1573885792926" duration="841000" />
+      <workItem from="1573918949099" duration="174000" />
+      <workItem from="1574025999550" duration="2118000" />
+      <workItem from="1575680196673" duration="1150000" />
+      <workItem from="1576082078536" duration="1265000" />
+      <workItem from="1576267206148" duration="512000" />
+      <workItem from="1576541997112" duration="1170000" />
+      <workItem from="1577111242990" duration="502000" />
+      <workItem from="1581313155679" duration="225000" />
+      <workItem from="1581608464241" duration="1511000" />
+      <workItem from="1581797651421" duration="3674000" />
     </task>
     <servers />
   </component>
@@ -111,6 +145,18 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="378" y="199" width="683" height="486" key="find.popup" timestamp="1581809658524">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="378" y="199" width="683" height="486" key="find.popup/0.23.1440.838/-483.-1417.2560.1417@0.23.1440.838" timestamp="1581809658524" />
+    <state x="575" y="305" width="670" height="401" key="search.everywhere.popup" timestamp="1581809423379">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="504" y="-940" width="670" height="676" key="search.everywhere.popup/0.23.1440.833/-518.-1417.2560.1417@-518.-1417.2560.1417" timestamp="1576117319424" />
+    <state x="575" y="305" width="670" height="401" key="search.everywhere.popup/0.23.1440.838/-483.-1417.2560.1417@0.23.1440.838" timestamp="1581809423379" />
+    <state x="1022" y="481" width="670" height="650" key="search.everywhere.popup/0.23.2560.1361@0.23.2560.1361" timestamp="1581794718928" />
   </component>
   <component name="masterDetails">
     <states>

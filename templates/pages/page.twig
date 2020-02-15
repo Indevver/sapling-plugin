@@ -26,8 +26,8 @@
                 {%- elseif row['Background Type'] == "overlay" -%}
                         background:
                         linear-gradient(
-                          rgba({{ row['Overlay Color'] }}, 0.45),
-                          rgba({{ row['Overlay Color'] }}, 0.45)
+                          rgba({{ row['Overlay Color'] }}, 0.6),
+                          rgba({{ row['Overlay Color'] }}, 0.7)
                         ),
                         url({{ Image(row['Background Image']).src }});
                         background-size: cover;
@@ -39,7 +39,6 @@
                 {%- elseif row['Background Type'] == "header-right" -%}
                         background-image: url({{ Image(row['Background Image']).src }});
                 {%- endif -%}
-                {%- if row['Max Width'] -%}max-width: {{ row['Max Width'] }};{%- endif -%}
             "
         >
 
@@ -53,6 +52,7 @@
                     {%- if row['Padding Bottom'] %} {{ row['Padding Bottom'] }} {% endif -%}
                     {%- if row['Padding Left'] %} {{ row['Padding Left'] }} {% endif -%}
                     "
+                 style="{%- if row['Max Width'] -%}max-width: {{ row['Max Width'] }};{%- endif -%}"
             >
                 <div class="content">
                     {% if row['Label'] %}<div class="is-label">{{ row['Label'] }}</div>{% endif %}
@@ -61,7 +61,7 @@
                         {{ row['Heading'] }}
                     </{{ row['Heading Size'] ?? 'h2' }}>{% endif %}
                 </div>
-                <div class="columns {% if row['Vertical Align Center'] %}is-vertically-centered{% endif %}">
+                <div class="columns is-multiline {% if row['Vertical Align Center'] %}is-vertically-centered{% endif %}">
                     {% include 'builder/Columns/columns-'~row.Columns~'.twig' %}
                 </div>
             </div>

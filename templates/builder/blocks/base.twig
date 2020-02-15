@@ -5,11 +5,9 @@
                         background-size: cover;
                         background-repeat: no-repeat;
                 {%- elseif item['Background Type'] == "overlay" -%}
-                        background:
-                        linear-gradient(
-                          rgba({{ item['Overlay Color'] }}, 0.45),
-                          rgba({{ item['Overlay Color'] }}, 0.45)
-                        ),
+                        background: linear-gradient(
+                          rgba({{ item['Overlay Color'] }}, 0.6),
+                          rgba({{ item['Overlay Color'] }}, 0.7) ),
                         url({{ Image(item['Background Image']).src }});
                         background-size: cover;
                         background-repeat: no-repeat;
