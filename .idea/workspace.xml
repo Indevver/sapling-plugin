@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d95e3699-fba4-4abf-aa27-980147b6a436" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sapling-plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sapling-plugin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/base.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/builder/blocks/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/builder/blocks/base.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/page.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/page.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +122,7 @@
       <workItem from="1577111242990" duration="502000" />
       <workItem from="1581313155679" duration="225000" />
       <workItem from="1581608464241" duration="1511000" />
-      <workItem from="1581797651421" duration="3674000" />
+      <workItem from="1581797651421" duration="4195000" />
     </task>
     <servers />
   </component>
