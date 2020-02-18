@@ -119,6 +119,17 @@ add_action('customize_register', function ($wp_customize) {
             'type'     => 'url',
         ]
     );
+    $wp_customize->add_setting('social_houzz', [
+        'default'     => '',
+        'transport'   => 'refresh',
+    ]);
+    $wp_customize->add_control('social_houzz', [
+            'label'    => __('Houzz', 'sapling'),
+            'section'  => 'social_media',
+            'settings' => 'social_houzz',
+            'type'     => 'url',
+        ]
+    );
     $wp_customize->add_setting('social_instagram', [
         'default'     => '',
         'transport'   => 'refresh',
@@ -138,6 +149,17 @@ add_action('customize_register', function ($wp_customize) {
             'label'    => __('Linkedin', 'sapling'),
             'section'  => 'social_media',
             'settings' => 'social_linkedin',
+            'type'     => 'url',
+        ]
+    );
+    $wp_customize->add_setting('social_myspace', [
+        'default'     => '',
+        'transport'   => 'refresh',
+    ]);
+    $wp_customize->add_control('social_myspace', [
+            'label'    => __('Myspace', 'sapling'),
+            'section'  => 'social_media',
+            'settings' => 'social_myspace',
             'type'     => 'url',
         ]
     );
@@ -171,17 +193,6 @@ add_action('customize_register', function ($wp_customize) {
             'label'    => __('Twitter', 'sapling'),
             'section'  => 'social_media',
             'settings' => 'social_twitter',
-            'type'     => 'url',
-        ]
-    );
-    $wp_customize->add_setting('social_myspace', [
-        'default'     => '',
-        'transport'   => 'refresh',
-    ]);
-    $wp_customize->add_control('social_myspace', [
-            'label'    => __('Myspace', 'sapling'),
-            'section'  => 'social_media',
-            'settings' => 'social_myspace',
             'type'     => 'url',
         ]
     );
