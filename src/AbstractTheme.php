@@ -33,7 +33,7 @@ abstract class AbstractTheme
 
     protected function getAsset($asset)
     {
-        $dist = get_theme_file_uri().'/../dist';
+        $dist = get_theme_file_uri().'/../dist/';
         $manifestPath = get_theme_file_path().'/../dist/manifest.json';
         $manifest = file_exists($manifestPath) ? json_decode(file_get_contents($manifestPath), true) : [];
         $file = isset($manifest[$asset]) ? $manifest[$asset] : $asset;
