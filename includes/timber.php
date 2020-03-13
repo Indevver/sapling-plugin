@@ -15,6 +15,7 @@ add_filter('timber/context', function($context){
     $context['twitter'] = get_theme_mod('social_twitter');
     $context['yelp'] = get_theme_mod('social_yelp');
     $context['youtube'] = get_theme_mod('social_youtube');
+    $context['menu_logo'] = get_theme_mod('menu_logo', 0);
 
     return $context;
 });
