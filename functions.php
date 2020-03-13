@@ -19,6 +19,7 @@ require_once __DIR__.'/includes/customizr.php';
 require_once __DIR__.'/includes/login-styles.php';
 require_once __DIR__.'/includes/timber.php';
 require_once __DIR__.'/includes/admin-bar.php';
+require_once __DIR__.'/includes/gutenberg.php';
 require_once __DIR__.'/shortcodes/date.php';
 require_once __DIR__.'/shortcodes/social.php';
 
