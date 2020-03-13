@@ -56,10 +56,12 @@
         {% include 'layouts/header.twig' %}
     {% endblock %}
 
-    {% block content_wrapper %}
-        {% block content %}
+    <main>
+        {% block content_wrapper %}
+            {% block content %}
+            {% endblock %}
         {% endblock %}
-    {% endblock %}
+    </main>
 
     {% block footer %}
         {% include 'layouts/footer.twig' %}
