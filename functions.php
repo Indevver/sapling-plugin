@@ -53,3 +53,8 @@ add_action('acf/init', function()
         }
     }
 });
+
+remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
+add_action( 'shutdown', function() {
+    while ( @ob_end_flush() );
+} );
