@@ -36,9 +36,8 @@ abstract class AbstractTheme
         $dist = get_theme_file_uri().'/../dist/';
         $manifestPath = get_theme_file_path().'/../dist/manifest.json';
         $manifest = file_exists($manifestPath) ? json_decode(file_get_contents($manifestPath), true) : [];
-        $file = isset($manifest[$asset]) ? $manifest[$asset] : $asset;
 
-        return "{$dist}{$file}";
+        return isset($manifest["/$asset"]) ? $manifest["/$asset"] : "{$dist}{$asset}";
     }
 
     public function registerMenus()
